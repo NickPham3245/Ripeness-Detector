@@ -32,18 +32,22 @@ while True:
 
         label = model.GetClassLabel(index)
         confidence=confidence*100
-        font.OverlayText(frame, text=f"{confidence:05.2f}% {label}", 
-                         x=5, y=5 * (font.GetSize() + 5),
-                         color=font.White, background=font.Gray40)
-        
-        showFeed.Render(frame)
+
         
         if label != prevLabel:
             print(label, confidence)
             if label.startswith("Rotten"):
-                print("You should probably throw this away.")
+                advice = "You should probably throw this away."
             else:
-                print(random.choice(recipes[foodType[label[6:]]]))
+                advice = random.choice(recipes[foodType[label[6:]]])
                 
         prevLabel=label
-            
+        
+        font.OverlayText(frame, text=f"{confidence:05.2f}% {label}", 
+                         x=0, y=0 * (font.GetSize() + 5),
+                         color=font.White, background=font.Gray40)
+        font.OverlayText(frame, text=advice, 
+                         x=5, y=10 * (font.GetSize() + 5),
+                         color=font.White, background=font.Gray40)
+        
+        showFeed.Render(frame)

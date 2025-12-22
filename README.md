@@ -1,7 +1,7 @@
 # Ripeness-Detector
 Many people don’t know what to do with a fruit once they buy it, and this causes them to go bad before they get a chance to eat it. This AI helps users think about what to do with these fruits and make the most out of their purchase. This can help reduce food waste and reduce total grocery costs overall. I made this because I thought it was interesting to see how an AI would handle this task.
 
-<img width="668" height="320" alt="Screenshot 2025-12-20 at 5 05 57 PM" src="https://github.com/user-attachments/assets/909aa609-3b06-4b0a-9779-a6a77c6bde1f" />
+<img width="667" height="319" alt="Screenshot 2025-12-21 at 7 06 38 PM" src="https://github.com/user-attachments/assets/5fe3cb2e-515b-45ce-a069-a5d8955475c5" />
 
 ## The Algorithm
 
@@ -16,3 +16,5 @@ By holding up the fruit or vegetable to a connected camera, the AI will detect b
 3. Change directories to "Ripeness-Detector"
 4. Grab food item (fruit/vegetable)
 5. Run python3 ripeCode.py
+6. Stop the code using Control + C
+7. Access your feed in the feed.mp4 file
